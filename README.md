@@ -4,6 +4,6 @@ A student directory project, which allows you to manage a list of students enrol
 
 ## How to use
 
-'''shell
+```shell
 ruby directory.rb
-'''
+```
