@@ -22,16 +22,18 @@ def print_header
   puts "-------------"
 end
 
-
 def print(names)
   puts "Enter an initial to search for"
   character = gets.chomp
+  array_iterator = 0
   
-  names.each.with_index(1) do |student, index|
-    initial = student[:name].chr
-    if student[:name].length < 12  && initial.downcase == character.downcase
-      puts "#{index}. #{student[:name]} (#{student[:cohort]} cohort)"
+  while array_iterator < names.length do 
+    #names.each.with_index(1) do |student, index|
+    initial = names[array_iterator][:name].chr
+    if names[array_iterator][:name].length < 12  && initial.downcase == character.downcase
+      puts "#{array_iterator + 1}. #{names[array_iterator][:name]} (#{names[array_iterator][:cohort]} cohort)"
     end
+    array_iterator += 1
   end
 end
 
